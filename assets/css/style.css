@@ -71,9 +71,27 @@ nav .nav-bar .logo a {
     padding: 10px;
 }
 
-.nav-links li a:hover {
-    color: #eed815;
-    background-color: #393939;
-    border-radius: 6px;
+/* credit to https://codepen.io/toianw/pen/YqEqrz */
+li > a {
+    color: #434656;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+  
+li > a::after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0;
+    top: 5px;
+    background: transparent;
+    transition: all 0.3s;  
+}
+  
+li > a:hover::after, li > a.active-nav::after {
+    width: 100%;
+    background: #EED815;
 }
 
